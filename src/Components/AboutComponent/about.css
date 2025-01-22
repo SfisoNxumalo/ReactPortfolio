@@ -1,0 +1,39 @@
+
+.about-info{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+}
+
+.main-div{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.714) 0px 3px 8px;
+    display: flex;
+    width: auto;
+    padding: 10px 25px;
+    justify-content: center;
+  }
+
+.my-img{
+    height: auto;
+    width: 25%;
+    border-radius: 0px 8px 8px  0px ;
+    border-radius: 50%;
+    height: auto;
+}
+
+.about-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-para{
+    /* height: 100%;
+    background-color: brown; */
+    font-size: 17px;
+    letter-spacing: 1px;
+    /* line-height:normal; */
+}

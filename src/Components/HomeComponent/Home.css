@@ -1,0 +1,77 @@
+
+.holder form{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    gap: 5px;
+}
+
+form input{
+    height: 35px;
+    border-radius: 8px;
+    outline: none;
+    border: 0px;
+    font-size: 18px;
+}
+
+.btn-subit{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 30px;
+}
+
+.btn-subit:hover{
+    background-color: rgb(15, 164, 15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    color: white;
+}
+
+input[type=text]{
+    border: 1px solid black;
+    margin-bottom: 8px;
+    padding: 0px 8px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.about-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-form form{
+    width: 20%;
+}
+
+.about-form form h3{
+    letter-spacing: 1px;
+}
+
+.about-form img{
+    width: 40%;
+}
+
+.h3-holder{
+    height: 25px;
+    overflow: hidden;
+    animation: showName 1.5s ease-in;
+}
+
+@keyframes showName{
+    0%{
+        width: 0%;
+    }
+    
+
+    100%{
+    
+        width: 100%;
+    }
+}

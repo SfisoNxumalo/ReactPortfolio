@@ -1,0 +1,41 @@
+input[type=text], input[type=email], input[type=number]{
+    border: 1px solid black;
+    margin-bottom: 8px;
+    padding: 0px 8px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: medium;
+}
+
+textarea{
+    border: 1px solid black;
+    margin-bottom: 8px;
+    padding: 0px 8px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: medium;
+    height: 100px;
+}
+
+.contact form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contact-form .my-img{
+    height: 250px;
+    width: auto;
+    border-radius: 0px 8px 8px  0px ;
+    border-radius: 50%;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

@@ -1,0 +1,99 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.main-holder{
+  /* background-color: red; */
+  /* height: 60vh; */
+  /* overflow:auto; */
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.view-controls{
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.component-holder{
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.view-controls img{
+  padding: 2px;
+  border-radius: 5px;
+  height: 30px;
+}
+
+
+
+.forward-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forward-button > img:hover{
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+}
+
+.forward-button:nth-child(1) img{
+  transform: rotate(180deg);
+}
+
+.forward-button:nth-child(1)> img:hover{
+  transform: scale(-1.1, -1.1);
+  cursor: pointer;
+}
+
+.view-controls img:hover{
+  background-color: white;
+  
+}
