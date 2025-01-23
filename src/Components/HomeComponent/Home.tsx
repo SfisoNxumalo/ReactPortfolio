@@ -1,9 +1,13 @@
-import CustomStorage from "../Services/CustomStorage";
+import CustomStorage from "../../Services/CustomStorage";
 import "./Home.css"
 
+/**
+ * Home Component that acts as the default page for the website
+ * @param props props object that is passed with values that can be used in the about component 
+ * @returns component with content
+ */
 export default function Home(props:any){
 
-    // const [userName, setUserName] = useState('');
     const customStorage = new CustomStorage();
 
     const handleSubmit = (event:any) => {
@@ -13,24 +17,34 @@ export default function Home(props:any){
     }
     
     return (
-        <>
-        <div className="holder">
-            <div className="about-form">
-
-                <img src="src\assets\greet.jpg" />
-                <form onSubmit={handleSubmit}>
-                    <div className="h3-holder">
-                        <h3>What's your name?</h3>
-                    </div>
-                    {/* onChange={(e:any) => {props.setUserName(`${e.target.value}`)}} */}
-                    <input id="named" name="name" type="text" />
-                    <button className="btn-subit">Submit</button>
-                </form>
-            </div>
-            
-            
-        </div>
-
-        </>
+        renderUI()
     )
+
+    /**
+     * function that is responsible for displaying the main content of the home component
+     * @returns returns tsx component
+     */
+    function renderUI(){
+        return (
+            <>
+            <div className="holder">
+                <div className="about-form">
+    
+                    <img src="src\assets\images\greet.jpg" />
+                    <form onSubmit={handleSubmit}>
+                        <div className="h3-holder">
+                            <h3>What's your name?</h3>
+                        </div>
+                        {/* onChange={(e:any) => {props.setUserName(`${e.target.value}`)}} */}
+                        <input id="named" name="name" type="text" />
+                        <button className="btn-subit">Submit</button>
+                    </form>
+                </div>
+                
+                
+            </div>
+    
+            </>
+        )
+    }
 }

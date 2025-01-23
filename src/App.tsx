@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import './App.css'
 import Home from './Components/HomeComponent/Home'
@@ -6,21 +5,35 @@ import About from './Components/AboutComponent/About';
 import Projects from './Components/ProjectsComponent/Projects';
 import Contact from './Components/ContactComponent/Contact';
 import Hobbies from './Components/HobbiesComponent/hobbies';
-import CustomStorage from './Components/Services/CustomStorage';
+import CustomStorage from './Services/CustomStorage';
 import Experience from './Components/Experience/Exprience';
 
 
-function App() {
+function App() { //Entry Function to the main App Component
 
-  const [userName, setUserName] = useState('');
-  // const [viewerDetails, setViewerDetails] = useState(false);
+  /**
+   * useState Hook is used to access state in the React functional components. 
+   * 'It is a special function that allows you to manage state within functional 
+   * components without the need for class-based components'
+   */
+  const [userName, setUserName] = useState(''); 
   const [ViewMode, setViewMode] = useState(false);
   const [pagePosition, setPagePosition] = useState(0);
 
+  /**
+   * String Array that contains all the available,pages you can navigate to
+   */
   const arrPages = ["About", "Projects", "Experience", "Hobbies", "Contact"]
 
+  /**
+   * Instance of custom storage class
+   */
   const customStorage = new CustomStorage();
 
+  /**
+   * The useEffect Hook allows you to perform side effects in your components.
+   * Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+   */
   useEffect(() => {
     const user = customStorage.getUserFromLocalStorage();
     setUserName(user)
@@ -30,19 +43,20 @@ function App() {
     RenderUI()
   )
 
-  function updateViewMode(){
-    setViewMode(!ViewMode)
-  }
 
+  /**
+   * function that is responsible for displaying the main content of the app component
+   * @returns returns tsx component
+   */
   function RenderUI(){
     return <>
     
     <div className='view-controls'>
       <label>
-        <img onClick={updateViewMode} style={{backgroundColor : ViewMode ? 'transparent' : 'white'}} src="src\assets\icons8-row-50.png"/>
+        <img onClick={updateViewMode} style={{backgroundColor : ViewMode ? 'transparent' : 'white'}} src="src\assets\images\icons8-row-50.png"/>
       </label> 
       <label>
-        <img onClick={updateViewMode} style={{backgroundColor : !ViewMode ? 'transparent' : 'white'}} src='src\assets\icons8-select-row-50.png'/>
+        <img onClick={updateViewMode} style={{backgroundColor : !ViewMode ? 'transparent' : 'white'}} src='src\assets\images\icons8-select-row-50.png'/>
       </label>
     </div>
 
@@ -63,6 +77,10 @@ function App() {
     </>
   }
 
+  /**
+   * function that is responsible for displaying the main content of the app component
+   * @returns returns tsx component of the different components that must be show
+   */
   function displayPages(){
     return (
       <>
@@ -75,19 +93,23 @@ function App() {
     )
   }
 
+  function updateViewMode(){
+    setViewMode(!ViewMode)
+  }
+
   function showCarouselControls(arrowSelector:number){
 
     if(arrowSelector){
       return (
         <div onClick={carouselBackwards} className="forward-button">
-          <img src='src\assets\icons8-arrow-50.png'/>
+          <img src='src\assets\images\icons8-arrow-50.png'/>
         </div>
       )
     }
 
     return (
       <div onClick={carouselForward} className="forward-button">
-        <img src='src\assets\icons8-arrow-50.png'/>
+        <img src='src\assets\images\icons8-arrow-50.png'/>
       </div>
     )
     

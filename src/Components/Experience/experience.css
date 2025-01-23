@@ -32,6 +32,10 @@
     width: 100%;
 }
 
+.item-holder img{
+    height: 40px;
+}
+
 .about-info{
     display: flex;
     flex-direction: column;

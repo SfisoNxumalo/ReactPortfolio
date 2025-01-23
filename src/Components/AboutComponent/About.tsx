@@ -1,10 +1,24 @@
-import image from '../../assets/imgcropped.jpg'
+import image from '../../assets/images/imgcropped.jpg'
 import './about.css'
+
+/**
+ * About Component that displays the about details of the developer
+ * @param props props object that is passed with values that can be used in the about component
+ * @returns component with content about the developer
+ */
 export default function About(props:any){
 
+    return (
+        renderUI()
+    )
 
+    /**
+   * function that is responsible for displaying the main content of the about component
+   * @returns returns tsx component
+   */
+    function renderUI() {
 
-    return <div className='holder'>
+        return <div className='holder'>
         
         <div className='about-info'>
             <h2>About Me</h2>
@@ -16,9 +30,9 @@ export default function About(props:any){
             </p>
 
             <div className='links'>
-                <img src="src\assets\icons8-facebook-50.png" />
-                <img src="src\assets\icons8-github-48.png" />
-                <img src="src\assets\icons8-linkedin-50.png" />
+                <img src="src\assets\images\icons8-facebook-50.png" />
+                <img src="src\assets\images\icons8-github-48.png" />
+                <img src="src\assets\images\icons8-linkedin-50.png" />
             </div>
         </div>
 
@@ -28,4 +42,6 @@ export default function About(props:any){
         
 
     </div>
+        
+    }
 }
