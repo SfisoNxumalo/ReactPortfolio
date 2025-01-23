@@ -5,13 +5,18 @@ export default function Projects(){
     const [data, setData] = useState([]);
 
     useEffect(() => {
-      fetch(`https://api.github.com/users/sfisonxumalo/repos?per_page=5`)
+      fetch(`https://api.github.com/users/sfisonxumalo/repos?per_page=6`)
         .then(response => response.json())
         .then(json => setData(json))
         .catch(error => console.error(error));
     }, []);
 
-    const repos = data.map((repo:any, index) => <a key={index} href={repo.html_url}><label className="repo-title">{repo.name}</label><p className="repo-desc"><i>{repo.description}</i></p></a>)
+    const repos = data.map((repo:any, index) => 
+        <a key={index} href={repo.html_url}>
+            <label className="repo-title">{repo.name}</label>
+            <p className="repo-desc"><i>{repo.description || 'No Description for this project'}</i></p>
+        </a>
+    )
 
     return <>
     <div className="holder">

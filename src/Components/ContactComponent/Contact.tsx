@@ -12,7 +12,7 @@ export default function Contact(){
                     <img className='my-img' src="src\assets\contact.jpg" />
                     
                     <form>
-                        <div className="h3-holder">
+                        <div className="h13-holder">
                             <h3>Let's get in touch</h3>
                         </div>
                         

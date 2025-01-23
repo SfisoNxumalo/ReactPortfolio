@@ -6,7 +6,8 @@ import About from './Components/AboutComponent/About';
 import Projects from './Components/ProjectsComponent/Projects';
 import Contact from './Components/ContactComponent/Contact';
 import Hobbies from './Components/HobbiesComponent/hobbies';
-import CustomStorage from './Components/Services/customStorage';
+import CustomStorage from './Components/Services/CustomStorage';
+import Experience from './Components/Experience/Exprience';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const [ViewMode, setViewMode] = useState(false);
   const [pagePosition, setPagePosition] = useState(0);
 
-  const arrPages = ["About", "Projects",  "Hobbies", "Contact"]
+  const arrPages = ["About", "Projects", "Experience", "Hobbies", "Contact"]
 
   const customStorage = new CustomStorage();
 
@@ -49,7 +50,7 @@ function App() {
     {ViewMode ? '' : showCarouselControls(1)}
       
       <div className="component-holder">
-        {userName ? '': <Home userName={userName} setUserName={setUserName}/>}
+        {userName ? '': <Home setUserName={setUserName}/>}
 
         { !userName ? <></> : displayPages()}
         
@@ -67,6 +68,7 @@ function App() {
       <>
         { ViewMode || arrPages[pagePosition] === "About" ? <About userName={userName}/> : ''}
         { ViewMode || arrPages[pagePosition] === "Projects" ? <Projects /> : ''}
+        { ViewMode || arrPages[pagePosition] === "Experience" ? <Experience /> : ''}
         { ViewMode || arrPages[pagePosition] === "Hobbies" ? <Hobbies /> : ''}
         { ViewMode || arrPages[pagePosition] === "Contact" ? <Contact/> : ''}
       </>

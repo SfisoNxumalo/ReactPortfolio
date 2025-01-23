@@ -1,7 +1,5 @@
-
-import CustomStorage from "../Services/customStorage";
+import CustomStorage from "../Services/CustomStorage";
 import "./Home.css"
-
 
 export default function Home(props:any){
 
@@ -10,7 +8,8 @@ export default function Home(props:any){
 
     const handleSubmit = (event:any) => {
         event.preventDefault();
-        customStorage.saveUserToLocalStorage(props.userName);
+        props.setUserName(`${event.target.named.value}`)
+        customStorage.saveUserToLocalStorage(event.target.named.value);
     }
     
     return (
@@ -23,8 +22,8 @@ export default function Home(props:any){
                     <div className="h3-holder">
                         <h3>What's your name?</h3>
                     </div>
-                    
-                    <input type="text" onChange={(e:any) => {props.setUserName(`${e.target.value}`)}}/>
+                    {/* onChange={(e:any) => {props.setUserName(`${e.target.value}`)}} */}
+                    <input id="named" name="name" type="text" />
                     <button className="btn-subit">Submit</button>
                 </form>
             </div>

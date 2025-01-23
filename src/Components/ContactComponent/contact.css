@@ -5,6 +5,7 @@ input[type=text], input[type=email], input[type=number]{
     border-radius: 5px;
     letter-spacing: 1px;
     font-size: medium;
+    width: 60%;
 }
 
 textarea{
@@ -15,10 +16,11 @@ textarea{
     letter-spacing: 1px;
     font-size: medium;
     height: 100px;
+    width: 60%;
 }
 
-.contact form{
-    width: 100%;
+.contact-form form{
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,4 +40,8 @@ textarea{
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.btn-subit{
+    width: 60%;
 }

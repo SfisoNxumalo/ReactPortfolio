@@ -21,16 +21,17 @@ body{
 
 
 .holder{
-  background-color: rgb(173, 39, 39);
+  background-color: rgb(255, 255, 255);
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.714) 0px 3px 8px;
   display: flex;
-  width: 100%;
+  width: 70vw;
   min-width: 80%;
   /* padding: 10px 25px; */
   height: 60vh;
   justify-content: center;
   padding: 5px;
+  padding: 10px 25px;
 }
 
 a {
@@ -53,6 +54,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2{
+  color: #0475d1;
 }
 
 button {

@@ -4,7 +4,7 @@ export default function About(props:any){
 
 
 
-    return <div className='main-div'>
+    return <div className='holder'>
         
         <div className='about-info'>
             <h2>About Me</h2>
@@ -14,11 +14,17 @@ export default function About(props:any){
 
             My experience includes building full-stack mobile and web applications, and I'm passionate about leveraging technology to create innovative and efficient solutions. Currently, I am working as a Software Developer Intern at <i><a href='https://www.1nebula.com'>1Nebula</a></i>, where I am further developing my skills in building applications while adhering to best programming practices. 
             </p>
+
+            <div className='links'>
+                <img src="src\assets\icons8-facebook-50.png" />
+                <img src="src\assets\icons8-github-48.png" />
+                <img src="src\assets\icons8-linkedin-50.png" />
+            </div>
         </div>
 
-        {/* <div className='c'> */}
+        <div className='img-hold'>
             <img className='my-img' src={image}/>
-        {/* </div> */}
+        </div>
         
 
     </div>

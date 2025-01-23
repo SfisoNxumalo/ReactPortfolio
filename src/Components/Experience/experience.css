@@ -1,0 +1,54 @@
+.liner{
+    background-color:#0475d1;
+    height: 6px;
+}
+
+.items-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.item-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item-holder:hover{
+    background-color: #0475d1;
+    color: white;
+
+}
+
+.item-holder p{
+    font-size: smaller;
+    margin: 0;
+    width: 100%;
+}
+
+.about-info{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.stick{
+    background-color: #0475d1;
+    height: 50px;
+    width: 6px;
+}
+
+.date{
+    font-size: small;
+    font-style: italic;
+    height: 100%;
+}
