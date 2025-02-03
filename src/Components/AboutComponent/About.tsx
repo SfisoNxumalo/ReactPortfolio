@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import image from '../../assets/images/imgcropped.jpg'
 import './about.css'
 
@@ -6,7 +7,7 @@ import './about.css'
  * @param props props object that is passed with values that can be used in the about component
  * @returns component with content about the developer
  */
-export default function About(props:any){
+const About = (props:any) => {
 
     return (
         renderUI()
@@ -45,3 +46,5 @@ export default function About(props:any){
         
     }
 }
+
+export default memo(About)

@@ -1,17 +1,13 @@
-import { useState, useEffect } from "react";
 import './projects.css'
+import Project from "../../Interfaces/Project";
+import useFetch from "../../Hooks/useFetch";
 
 export default function Projects() {
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
 
-    useEffect(() => {
-        fetch(`https://api.github.com/users/sfisonxumalo/repos?per_page=6`)
-            .then(response => response.json())
-            .then(json => setData(json))
-            .catch(error => console.error(error));
-    }, []);
+    const [data] = useFetch(`https://api.github.com/users/sfisonxumalo/repos?per_page=6`);
 
-    const repos = data.map((repo: any, index) =>
+    const repos = data.map((repo: Project, index) =>
         <a key={index} href={repo.html_url}>
             <label className="repo-title">{repo.name}</label>
             <p className="repo-desc"><i>{repo.description || 'No Description for this project'}</i></p>

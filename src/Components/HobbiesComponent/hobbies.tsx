@@ -1,11 +1,12 @@
+import { memo } from 'react';
 import './hobbies.css'
 
 /**
  * Hobbies Component that displays the hobbies details of the developer
  * @returns component of the hobbies page
  */
-export default function Hobbies() {
-
+const Hobbies = () => {
+    
     return (
         renderUI()
     )
@@ -52,3 +53,5 @@ export default function Hobbies() {
         );
     }
 }
+
+export default memo(Hobbies)

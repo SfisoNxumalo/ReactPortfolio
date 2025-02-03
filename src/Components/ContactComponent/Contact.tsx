@@ -6,6 +6,8 @@ import './contact.css'
  */
 export default function Contact() {
 
+    console.log("Contact");
+
     return (
         renderUI()
     )

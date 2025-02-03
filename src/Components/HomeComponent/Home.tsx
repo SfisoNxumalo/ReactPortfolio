@@ -1,14 +1,20 @@
+import { memo } from "react";
 import CustomStorage from "../../Services/CustomStorage";
 import "./Home.css"
+import { Checkbox } from "@mantine/core";
+
 
 /**
  * Home Component that acts as the default page for the website
  * @param props props object that is passed with values that can be used in the about component 
- * @returns component with content
+ * @returns home component with content of the landing page
  */
-export default function Home(props:any){
+const Home = (props:any) => {
 
     const customStorage = new CustomStorage();
+
+    console.log("Home");
+    
 
     const handleSubmit = (event:any) => {
         event.preventDefault();
@@ -38,6 +44,10 @@ export default function Home(props:any){
                         {/* onChange={(e:any) => {props.setUserName(`${e.target.value}`)}} */}
                         <input id="named" name="name" type="text" />
                         <button className="btn-subit">Submit</button>
+                        <Checkbox
+                            defaultChecked
+                            label="Save Information"
+                        />
                     </form>
                 </div>
                 
@@ -47,4 +57,6 @@ export default function Home(props:any){
             </>
         )
     }
-}
+};
+
+export default memo(Home) 

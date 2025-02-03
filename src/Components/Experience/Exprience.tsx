@@ -6,6 +6,9 @@ import "./experience.css";
  * @returns component of the experience page
  */
 export default function Experience() {
+
+    console.log("Experience");
+    
     return renderUI();
 
     /**
