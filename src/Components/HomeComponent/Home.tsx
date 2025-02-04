@@ -13,9 +13,6 @@ const Home = (props:any) => {
 
     const customStorage = new CustomStorage();
 
-    console.log("Home");
-    
-
     const handleSubmit = (event:any) => {
         event.preventDefault();
         props.setUserName(`${event.target.named.value}`)

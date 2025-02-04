@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, useMemo } from 'react'
 import image from '../../assets/images/imgcropped.jpg'
 import './about.css'
 

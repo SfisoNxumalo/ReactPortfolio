@@ -1,9 +1,9 @@
 import './projects.css'
-import Project from "../../Interfaces/Project";
+
 import useFetch from "../../Hooks/useFetch";
+import { Project } from '../../Interfaces/IProject';
 
 export default function Projects() {
-    // const [data, setData] = useState([]);
 
     const [data] = useFetch(`https://api.github.com/users/sfisonxumalo/repos?per_page=6`);
 
