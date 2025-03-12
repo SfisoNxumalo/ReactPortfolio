@@ -1,6 +1,16 @@
+import { Modal, Button } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+
 export default function Dialog(){
-    <div className="holder"></div>
-    return <div className="holder">
-        
-    </div>
+    const [opened, { open, close }] = useDisclosure(false);
+    return <>
+       
+      <Modal opened={opened} onClose={close} title="Authentication">
+        {/* Modal content */}
+      </Modal>
+
+      <Button variant="default" onClick={open}>
+        Open modal
+      </Button>
+    </>
 }

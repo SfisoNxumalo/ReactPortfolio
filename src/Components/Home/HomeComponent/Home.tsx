@@ -1,7 +1,7 @@
 import { memo } from "react";
-import CustomStorage from "../../Services/CustomStorage";
+import CustomStorage from "../../../Services/CustomStorage";
 import "./Home.css"
-import { Checkbox } from "@mantine/core";
+// import { Checkbox } from "@mantine/core";
 
 
 /**
@@ -41,10 +41,10 @@ const Home = (props:any) => {
                         {/* onChange={(e:any) => {props.setUserName(`${e.target.value}`)}} */}
                         <input id="named" name="name" type="text" />
                         <button className="btn-subit">Submit</button>
-                        <Checkbox
+                        {/* <Checkbox
                             defaultChecked
                             label="Save Information"
-                        />
+                        /> */}
                     </form>
                 </div>
                 

@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -136,4 +136,28 @@
 .download-cv:hover{
   background-color: #0475d1;
   color: white;
+}
+
+.btn-logReg{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+    padding: 5px 5%;
+}
+
+.btn-logReg button{
+  background-color: transparent;
+  text-decoration: underline;
+  color: aliceblue;
+}
+
+.dashboard-holder{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.main-content{
+  width: 100%;
 }

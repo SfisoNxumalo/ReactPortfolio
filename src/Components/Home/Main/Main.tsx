@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-import CustomStorage from "../../Services/CustomStorage";
+import CustomStorage from "../../../Services/CustomStorage";
 import About from "../AboutComponent/About";
 import Contact from "../ContactComponent/Contact";
-import Experience from "../Experience/Exprience";
+import Experience from "../ExperienceComponent/Exprience";
 import Hobbies from "../HobbiesComponent/hobbies";
 import Home from "../HomeComponent/Home";
 import Projects from "../ProjectsComponent/Projects";
+
+import Login from "../../DialogComponent/LoginDialog/Login"
+import { Link } from "react-router-dom";
 
 export default function Main() { //Entry Function to the main App Component
   

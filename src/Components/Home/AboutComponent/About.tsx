@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'react'
-import image from '../../assets/images/imgcropped.jpg'
+import image from '../../../assets/images/imgcropped.jpg'
 import './about.css'
 
 /**
